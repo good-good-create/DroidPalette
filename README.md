@@ -14,3 +14,7 @@
 2 in column C indicates that it belongs to "generating patches by modifying the Android code framework, such as Java code".<br>
 3 in column C indicates that it belongs to "generating patches by combining the above two approaches, but the modification to the Android framework code in this case can be achieved through changes to the XML configuration files".<br>
 
+
+
+# The URL address of the survey.
+https://forms.gle/GGtPYgYPSfoREYBv5
