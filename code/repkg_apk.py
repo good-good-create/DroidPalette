@@ -44,10 +44,10 @@ def decompile(eachappPath, decompileAPKPath):
         print("Decompile finished.")
     except subprocess.TimeoutExpired:
         print(f"Decompile process timed out after {timeout} seconds.")
-        return  # 超时则跳过，避免继续执行
+        return
     except Exception as e:
         print(f"Error occurred: {e}")
-        return  # 其他异常，退出函数
+        return
 
 
 
