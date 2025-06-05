@@ -9,8 +9,17 @@ from pygetwindow import pointInRect
 
 import find_theme
 
-candidate_att_text = ['{http://schemas.android.com/apk/res/android}textColor','{http://schemas.android.com/apk/res/android}textColorHint','{http://schemas.android.com/apk/res/android}textColorLink']
-candidate_att_image = ['{http://schemas.android.com/apk/res/android}tint','{http://schemas.android.com/apk/res/android}backgroundTint','{http://schemas.android.com/apk/res/android}drawableTint']
+candidate_att_text = ['{http://schemas.android.com/apk/res/android}textColor','{http://schemas.android.com/apk/res/android}textColorHint','{http://schemas.android.com/apk/res/android}textColorLink',
+                      '{http://schemas.android.com/apk/res/android}focusedSearchResultHighlightColor','{http://schemas.android.com/apk/res/android}searchResultHighlightColor','{http://schemas.android.com/apk/res/android}shadowColor',
+                      '{http://schemas.android.com/apk/res/android}textColorHighlight','{http://schemas.android.com/apk/res/android}cacheColorHint ','{http://schemas.android.com/apk/res/android}focusedMonthDateColor',
+                      '{http://schemas.android.com/apk/res/android}unfocusedMonthDateColor','{http://schemas.android.com/apk/res/android}weekNumberColor ','{http://schemas.android.com/apk/res/android}calendarTextColor',
+                      '{http://schemas.android.com/apk/res/android}dayOfWeekBackground','{http://schemas.android.com/apk/res/android}headerBackground ','{http://schemas.android.com/apk/res/android}yearListSelectorColor',
+                      '{http://schemas.android.com/apk/res/android}subtitleTextColor']
+candidate_att_image = ['{http://schemas.android.com/apk/res/android}tint','{http://schemas.android.com/apk/res/android}backgroundTint','{http://schemas.android.com/apk/res/android}drawableTint',
+                       '{http://schemas.android.com/apk/res/android}thumbTint','{http://schemas.android.com/apk/res/android}drawableTintMode','{http://schemas.android.com/apk/res/android}tickMarkTint',
+                       '{http://schemas.android.com/apk/res/android}hand_hourTint','{http://schemas.android.com/apk/res/android}hand_minuteTint','{http://schemas.android.com/apk/res/android}hand_secondTint',
+                       '{http://schemas.android.com/apk/res/android}weekSeparatorLineColor','{http://schemas.android.com/apk/res/android}checkMarkTint','{http://schemas.android.com/apk/res/android}buttonTint',
+                       '{http://schemas.android.com/apk/res/android}childDivider','{http://schemas.android.com/apk/res/android}divider','{http://schemas.android.com/apk/res/android}indeterminateTint']
 title_att = 'titleTextColor'
 
 def do_button_modify(layout_file,component_id_string,new_color,text_cur_seq):
