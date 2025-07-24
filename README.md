@@ -33,4 +33,6 @@ In main.py, please provide the following parameters:
 - report_path: The path to Xbot's detection results.
 - apk_path: The path to the problematic APK file.
 - original_issue_path: The backup path for the original detection results from Xbot.
+
+Usage:python main.py
   
