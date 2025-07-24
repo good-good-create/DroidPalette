@@ -21,5 +21,8 @@ Column K indicates the number of code lines in the project corresponding to the 
 # The URL address of the survey.
 https://forms.gle/GGtPYgYPSfoREYBv5
 
-# Environment Configuration.
-·
+# Environment Configuration
+- Windows
+- Python:3.8
+- ApkTool:2.10.0
+  
