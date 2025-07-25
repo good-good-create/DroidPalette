@@ -18,7 +18,7 @@ Setting up
 - 执行上述步骤之后，在run_xbot.py文件内将emulator信息填写完整。
 
 Run
-需要提供待修复的问题应用，以及经过Xbot检测得出的检测报告
+
 
 # Usage
 
