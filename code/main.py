@@ -40,16 +40,57 @@ def del_file(directory,act_name):
         print(f"error: {e}")
 
 def decompile(eachappPath, decompileAPKPath):
-    print ("decompiling...")
-    cmd = "apktool d {0} -f -o {1}".format(eachappPath, decompileAPKPath)
-    os.system(cmd)
+    print("decompiling...")
+    timeout = 10
+    apktool_path = 'D:/Apktool/apktool.bat'
+    cmd = [apktool_path, 'd', eachappPath, '-f', '-o', decompileAPKPath]
+    try:
+        result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=timeout)
+        print(result.stdout)
+        print(result.stderr)
 
-def recompile(decompileAPKPath, repackagedAppPath, recompileAPKName):
-    print ("recompile...")
-    cmd = "apktool b {0} -o {1}".format(decompileAPKPath, os.path.join(repackagedAppPath, recompileAPKName))
-    result = subprocess.run([cmd],stdout=subprocess.PIPE,text=True)
-    output = result.stdout
-    return output
+        print("Decompile finished.")
+    except subprocess.TimeoutExpired:
+        print(f"Decompile process timed out after {timeout} seconds.")
+        return
+    except Exception as e:
+        print(f"Error occurred: {e}")
+        return
+
+
+def recompile(decompileAPKPath,repair_path):
+    print("decompiling...")
+    timeout = 10
+    apktool_path = 'D:/Apktool/apktool.bat'
+    # cmd = [apktool_path, 'd', eachappPath, '-f', '-o', decompileAPKPath]
+    cmd = f"{apktool_path} b {decompileAPKPath}"
+    try:
+        result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=timeout)
+        print(result.stdout)
+        print(result.stderr)
+        print("recompile finished.")
+
+        dist_folder = os.path.join(decompileAPKPath, 'dist')
+        if os.path.exists(dist_folder):
+            for file in os.listdir(dist_folder):
+                if file.endswith('.apk'):
+                    apk_path = os.path.join(dist_folder, file)
+                    # 确保 repair_path 目录存在
+                    os.makedirs(repair_path, exist_ok=True)
+                    target_apk_path = os.path.join(repair_path, file)
+                    shutil.move(apk_path, target_apk_path)
+                    print(f"APK moved to: {target_apk_path}")
+                    return
+            print("No APK file found in dist folder.")
+        else:
+            print("dist folder not found.")
+
+    except subprocess.TimeoutExpired:
+        print(f"recompile process timed out after {timeout} seconds.")
+        return
+    except Exception as e:
+        print(f"Error occurred: {e}")
+        return
 
 
 def repair_process(act_name,decomp_path,report_path,app_name):
@@ -149,10 +190,9 @@ def repair_process(act_name,decomp_path,report_path,app_name):
             image_seq = 0
             text_seq = 0
 
-def repair_apk(report_path,apk_path,apk_all_name,decomp_path,orginal_issue_path):
+def repair_apk(report_path,apk_path,apk_all_name,decomp_path,orginal_issue_path,repair_path):
         global f_num
-
-
+        decompile(apk_path,decomp_path)
         issue_path = os.path.join(orginal_issue_path,"issues")
         issue_path = Path(issue_path)
 
@@ -164,12 +204,13 @@ def repair_apk(report_path,apk_path,apk_all_name,decomp_path,orginal_issue_path)
                     f_num = 0
         print("repair all success!")
 
+        recompile(decomp_path,repair_path)
+
 
 
 apk_all_name = 'com.example.trigger_400'
-
+repair_path = f'D:/repair_path'
 decomp_path = f"D:/Apktool/{apk_all_name}" #The directory for decompiled APK files
-
 
 report_path = 'E:/pythonProject/Xbot-main/results/outputs' #file path to issue report
 
@@ -177,7 +218,7 @@ apk_path = f'E:/pythonProject/issue_apk/{apk_all_name}' # issue apk path
 
 orginal_issue_path = f'E:/orignal/{apk_all_name}' # Backup bug report address
 
-repair_apk(report_path,apk_path,apk_all_name,decomp_path,orginal_issue_path)
+repair_apk(report_path,apk_path,apk_all_name,decomp_path,orginal_issue_path,repair_path)
 
 
 
