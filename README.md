@@ -18,7 +18,8 @@ Setting up
 - 执行上述步骤之后，在run_xbot.py文件内将emulator信息填写完整。
 
 Run
-
+在code/main.py文件所在的目录下执行下述命令：
+`python main.py`
 
 # Usage
 
