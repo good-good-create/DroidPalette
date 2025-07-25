@@ -34,7 +34,7 @@ All Optional Parameters of SetDroid
 - `repair_path`: The location of the repaired APK file.
 - `apktool_path`: The location of apktool
 
-The set of candidate attributes is provided by ConfDroid, and the specific implementation details can be referred to at: https://sites.google.com/view/confdroid
+The set of candidate attributes is provided by ConfDroid, and the specific implementation details can be referred to at: https://sites.google.com/view/confdroid </br>
 Input: the APK file of the problematic app to be repaired and its detection results (detected by Xbot)</br>
 Output: a new APK file repaired by DroidPalette
 
