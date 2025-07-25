@@ -32,6 +32,7 @@ All Optional Parameters of SetDroid
 - `decomp_path`: The output directory path of the decompiled APK file.
 - `orginal_issue_path`: The location of the backup file for the original detection report of the problematic APK to be repaired.
 - `repair_path`: The location of the repaired APK file.
+- `apktool_path`: The location of apktool
 
 Input: the APK file of the problematic app to be repaired and its detection results (detected by Xbot)</br>
 Output: a new APK file repaired by DroidPalette
