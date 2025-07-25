@@ -18,10 +18,10 @@ Setting up
 - Open Android Studio and select "Create Virtual Device" in the Device Manager.
 - For the Virtual Device, select Pixel, set the screen resolution to 1080×1920, and choose API level 33 or higher.
 - Open the newly created virtual device, and you need to install the Google Accessibility Scanner tool.
-- After completing the above steps, fill in the emulator information in the `run_xbot.py` file.
+- After completing the above steps, fill in the emulator information in the `run_xbot.py`.
 
 Run</br>
-- Run the following command in the directory where the `main.py` file is located to execute DroidPalette:
+- Run the following command in the directory where the `main.py` is located to execute DroidPalette:
 <pre>python main.py</pre>
 
 # Detailed Description
