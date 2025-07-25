@@ -25,6 +25,10 @@ Run</br>
 <pre>python main.py</pre>
 
 # Detailed Description
+
+Input: the APK file of the problematic app to be repaired and its detection results (detected by Xbot)</br>
+Output: a new APK file repaired by DroidPalette</br>
+
 All Optional Parameters of SetDroid
 - `report_path`: The path to Xbot's detection results.
 - `apk_path`: The path to the problematic APK file.
@@ -35,6 +39,5 @@ All Optional Parameters of SetDroid
 - `apktool_path`: The location of apktool
 
 The set of candidate attributes is provided by ConfDroid, and the specific implementation details can be referred to at: https://sites.google.com/view/confdroid </br>
-Input: the APK file of the problematic app to be repaired and its detection results (detected by Xbot)</br>
-Output: a new APK file repaired by DroidPalette
+
 
