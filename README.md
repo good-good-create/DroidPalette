@@ -18,16 +18,18 @@ Setting up
 - After completing the above steps, fill in the emulator information in the `run_xbot.py` file.
 
 Run</br>
-Run the following command in the directory where the code/main.py file is located to execute DroidPalette:
+- Run the following command in the directory where the code/main.py file is located to execute DroidPalette:
 <pre>python main.py</pre>
 
-# Usage
+# Detailed Description
+All Optional Parameters of SetDroid
+- `report_path`: The path to Xbot's detection results.
+- `apk_path`: The path to the problematic APK file.
+- `apk_all_name`: The name of the APK file to be repaired.
+- `decomp_path`: The output directory path of the decompiled APK file.
+- `orginal_issue_path`: The location of the backup file for the original detection report of the problematic APK to be repaired.
+- `repair_path`: The location of the repaired APK file.
 
-In main.py, please provide the following parameters:
-- decomp_path: The directory path where the decompiled APK files will be output.
-- report_path: The path to Xbot's detection results.
-- apk_path: The path to the problematic APK file.
-- original_issue_path: The backup path for the original detection results from Xbot.
+Input: the APK resource file of the problematic app to be repaired and its detection results (detected by Xbot)
+Output: a new APK file repaired by DroidPalette
 
-Usage : python main.py
-  
