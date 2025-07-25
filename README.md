@@ -3,6 +3,9 @@
 # The URL address of the survey.
 https://forms.gle/GGtPYgYPSfoREYBv5
 
+# The URL address of DroidPalette's experimental dataset
+https://drive.google.com/file/d/136trbD78Z0P0r4b5OZp1xzgCbz-ZdGKp/view?usp=drive\_link
+
 # Environment Configuration
 - Windows
 - Python:3.8
@@ -30,6 +33,6 @@ All Optional Parameters of SetDroid
 - `orginal_issue_path`: The location of the backup file for the original detection report of the problematic APK to be repaired.
 - `repair_path`: The location of the repaired APK file.
 
-Input: the APK resource file of the problematic app to be repaired and its detection results (detected by Xbot)</br>
+Input: the APK file of the problematic app to be repaired and its detection results (detected by Xbot)</br>
 Output: a new APK file repaired by DroidPalette
 
