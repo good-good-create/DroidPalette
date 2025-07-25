@@ -7,6 +7,9 @@ https://forms.gle/GGtPYgYPSfoREYBv5
 - Windows
 - Python:3.8
 - ApkTool:2.10.0
+- Android SDK:API 35+
+
+You need first
 
 # Usage
 
