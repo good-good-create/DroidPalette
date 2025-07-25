@@ -21,7 +21,7 @@ Setting up
 - After completing the above steps, fill in the emulator information in the `run_xbot.py` file.
 
 Run</br>
-- Run the following command in the directory where the code/main.py file is located to execute DroidPalette:
+- Run the following command in the directory where the `main.py` file is located to execute DroidPalette:
 <pre>python main.py</pre>
 
 # Detailed Description
