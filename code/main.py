@@ -75,7 +75,6 @@ def recompile(decompileAPKPath,repair_path):
             for file in os.listdir(dist_folder):
                 if file.endswith('.apk'):
                     apk_path = os.path.join(dist_folder, file)
-                    # 确保 repair_path 目录存在
                     os.makedirs(repair_path, exist_ok=True)
                     target_apk_path = os.path.join(repair_path, file)
                     shutil.move(apk_path, target_apk_path)
