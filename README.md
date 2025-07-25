@@ -19,7 +19,7 @@ Setting up
 
 Run
 在code/main.py文件所在的目录下执行下述命令：
-`python main.py`
+<pre>```python main.py```</pre>
 
 # Usage
 
