@@ -17,7 +17,7 @@ Setting up
 - 打开新创建的虚拟机，你需要安装Google Accessibility Scanner工具。
 - 执行上述步骤之后，在run_xbot.py文件内将emulator信息填写完整。
 
-Run
+Run</br>
 在code/main.py文件所在的目录下执行下述命令即可运行DroidPalette：
 <pre>python main.py</pre>
 
