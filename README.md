@@ -7,7 +7,7 @@ https://forms.gle/GGtPYgYPSfoREYBv5
 https://drive.google.com/file/d/136trbD78Z0P0r4b5OZp1xzgCbz-ZdGKp/view?usp=drive\_link
 
 # Environment Configuration
-- Windows
+- Windows10
 - Python:3.8
 - ApkTool:2.10.0
 - Android SDK:API 35+
