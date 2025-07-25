@@ -9,7 +9,11 @@ https://forms.gle/GGtPYgYPSfoREYBv5
 - ApkTool:2.10.0
 - Android SDK:API 35+
 
-You need first
+# Setting up
+- 打开Android Studio，在Device Manager选择Create Visual Device。
+- Visual Device选择Pixel，屏幕分辨率选择1080×1920，API选择33+。
+- 创建完毕之后，在run_xbot.py文件内将emulator信息填写完整。
+  
 
 # Usage
 
