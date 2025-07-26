@@ -23,7 +23,7 @@ https://drive.google.com/file/d/136trbD78Z0P0r4b5OZp1xzgCbz-ZdGKp/view?usp=drive
 - Open Android Studio and select "Create Virtual Device" in the Device Manager.
 - For the Virtual Device, select Pixel, set the screen resolution to 1080×1920, and choose API level 33 or higher.
 - Open the newly created virtual device, and you need to install the Google Accessibility Scanner tool.
-- After completing the above steps, fill in the emulator information in the `run_xbot.py`.
+- After completing the above steps, fill in the emulator information in `run_xbot.py`.
 
 ## Run
 - Run the following command in the directory where the `main.py` is located to execute DroidPalette. `apk_all_name` means `The name of the APK file to be repaired`, `apk_path` means `The name of the APK file to be repaired` and `repair_path` means `The location of the repaired APK file`.
