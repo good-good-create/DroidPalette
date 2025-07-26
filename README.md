@@ -27,7 +27,7 @@ https://drive.google.com/file/d/136trbD78Z0P0r4b5OZp1xzgCbz-ZdGKp/view?usp=drive
 
 ## Run
 - Run the following command in the directory where the `main.py` is located to execute DroidPalette:
-<pre>python main.py</pre>
+<pre>python main.py apk_all_name apk_path repair_path</pre>
 
 # Detailed Description
 
