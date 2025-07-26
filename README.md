@@ -31,10 +31,7 @@ https://drive.google.com/file/d/136trbD78Z0P0r4b5OZp1xzgCbz-ZdGKp/view?usp=drive
 
 # Detailed Description
 
-Input: the APK file of the problematic app to be repaired and its detection results (detected by Xbot)</br>
-Output: a new APK file repaired by DroidPalette</br>
-
-All Optional Parameters of DroidPalette
+All Required Parameters of DroidPalette
 - `report_path`: The path to Xbot's detection results.
 - `apk_path`: The path to the problematic APK file.
 - `apk_all_name`: The name of the APK file to be repaired.
