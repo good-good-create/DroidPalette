@@ -206,15 +206,20 @@ def repair_apk(report_path,apk_path,apk_all_name,decomp_path,orginal_issue_path,
         recompile(decomp_path,repair_path)
 
 
+parser = argparse.ArgumentParser(description="Repair APK using specified paths.")
+parser.add_argument("apk_all_name", help="APK name, e.g., com.example.trigger_400")
+parser.add_argument("apk_path", help="Full path to the issue APK, e.g., E:/pythonProject/issue_apk/com.example.trigger_400")
+parser.add_argument("repair_path", help="Output directory for repaired APK, e.g., D:/repair_path")
 
-apk_all_name = 'com.example.trigger_400'
-repair_path = f'D:/repair_path'
+args = parser.parse_args()
+
+
+apk_all_name = args.apk_all_name
+apk_path = args.apk_path
+repair_path = args.repair_path
+
 decomp_path = f"D:/Apktool/{apk_all_name}" #The directory for decompiled APK files
-
 report_path = 'E:/pythonProject/Xbot-main/results/outputs' #file path to issue report
-
-apk_path = f'E:/pythonProject/issue_apk/{apk_all_name}' # issue apk path
-
 orginal_issue_path = f'E:/orignal/{apk_all_name}' # Backup bug report address
 
 repair_apk(report_path,apk_path,apk_all_name,decomp_path,orginal_issue_path,repair_path)
