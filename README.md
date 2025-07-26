@@ -26,7 +26,7 @@ https://drive.google.com/file/d/136trbD78Z0P0r4b5OZp1xzgCbz-ZdGKp/view?usp=drive
 - After completing the above steps, fill in the emulator information in the `run_xbot.py`.
 
 ## Run
-- Run the following command in the directory where the `main.py` is located to execute DroidPalette. `apk_all_name` means `The name of the APK file to be repaired`, `apk_path` means `The name of the APK file to be repaired` and `repair_path` means `The location of the repaired APK file`:
+- Run the following command in the directory where the `main.py` is located to execute DroidPalette. `apk_all_name` means `The name of the APK file to be repaired`, `apk_path` means `The name of the APK file to be repaired` and `repair_path` means `The location of the repaired APK file`.
 <pre>python main.py apk_all_name apk_path repair_path</pre>
 - A sample is shown below.
 <pre> python main.py com.example.trigger_400 D:/issue_apk/com.example.trigger_400.apk D:/repair_path </pre>
